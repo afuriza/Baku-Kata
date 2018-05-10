@@ -1,0 +1,23 @@
+#Internal package file, do not edit.
+#Thu May 10 21:26:27 SGT 2018
+2.base=C\:\\Users\\masdi\\Documents\\lamw-prj\\baku_kata\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=lance.png
+2.baseType=DIRECTORY
+3.base=C\:\\Users\\masdi\\Documents\\lamw-prj\\baku_kata\\build\\intermediates\\assets\\debug
+2.set=DEX
+1.path=windmil.png
+4.base=C\:\\Users\\masdi\\Documents\\lamw-prj\\baku_kata\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+count=5
+2.path=classes.dex
+4.set=NATIVE_RESOURCE
+3.path=don_quixote.png
+3.baseType=DIRECTORY
+1.set=ASSET
+4.path=lib/armeabi-v7a/libcontrols.so
+1.baseType=DIRECTORY
+0.base=C\:\\Users\\masdi\\Documents\\lamw-prj\\baku_kata\\build\\intermediates\\assets\\debug
+0.baseType=DIRECTORY
+3.set=ASSET
+1.base=C\:\\Users\\masdi\\Documents\\lamw-prj\\baku_kata\\build\\intermediates\\assets\\debug
+4.baseType=DIRECTORY
+0.set=ASSET

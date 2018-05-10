@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.0.1">
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="   String destPath = context.getFilesDir().getAbsolutePath();"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1681"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="// -------------------------------------------------------------------------"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1688"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleCompatible"
+        severity="Fatal"
+        message="This support library should not use a different version (25) than the `compileSdkVersion` (27)"
+        category="Correctness"
+        priority="8"
+        summary="Incompatible Gradle Versions"
+        explanation="There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your `targetSdkVersion`.)"
+        errorLine1="    compile &apos;com.android.support:appcompat-v7:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="41"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleCompatible"
+        severity="Fatal"
+        message="When using a `compileSdkVersion` android-O revision 2 or higher, the support library version should be 26.0.0-beta1 or higher (was 25.3.1)"
+        category="Correctness"
+        priority="8"
+        summary="Incompatible Gradle Versions"
+        explanation="There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your `targetSdkVersion`.)"
+        errorLine1="    compile &apos;com.android.support:appcompat-v7:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="41"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleCompatible"
+        severity="Fatal"
+        message="This support library should not use a different version (25) than the `compileSdkVersion` (27)"
+        category="Correctness"
+        priority="8"
+        summary="Incompatible Gradle Versions"
+        explanation="There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your `targetSdkVersion`.)"
+        errorLine1="    compile &apos;com.android.support:design:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="42"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleCompatible"
+        severity="Fatal"
+        message="This support library should not use a different version (25) than the `compileSdkVersion` (27)"
+        category="Correctness"
+        priority="8"
+        summary="Incompatible Gradle Versions"
+        explanation="There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your `targetSdkVersion`.)"
+        errorLine1="    compile &apos;com.android.support:cardview-v7:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="43"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleCompatible"
+        severity="Fatal"
+        message="This support library should not use a different version (25) than the `compileSdkVersion` (27)"
+        category="Correctness"
+        priority="8"
+        summary="Incompatible Gradle Versions"
+        explanation="There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your `targetSdkVersion`.)"
+        errorLine1="    compile &apos;com.android.support:recyclerview-v7:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="44"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="     if (netInfo.getTypeName().equalsIgnoreCase(&quot;MOBILE&quot;))"
+        errorLine2="                                    ~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1070"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="     MOBILE = true;"
+        errorLine2="        ~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1072"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="      for (Enumeration&lt;InetAddress> enumIpAddr = networkinterface.getInetAddresses(); enumIpAddr.hasMoreElements();) {"
+        errorLine2="                                                                                             ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1092"
+            column="94"/>
+    </issue>
+
+    <issue
+        id="WifiManagerLeak"
+        severity="Fatal"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `this.controls.activity` to `this.controls.activity.getApplicationContext()`"
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context. Change `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="                        "
+        errorLine2="          ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="378"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="WifiManagerLeak"
+        severity="Fatal"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `this.controls.activity` to `this.controls.activity.getApplicationContext()`"
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context. Change `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1=" return this.onListItemClickListener; "
+        errorLine2="                          ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="384"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="WifiManagerLeak"
+        severity="Fatal"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `controls.activity` to `controls.activity.getApplicationContext()`"
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context. Change `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="    for (Enumeration&lt;NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); "
+        errorLine2="                                                                                   ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1089"
+            column="84"/>
+    </issue>
+
+    <issue
+        id="WifiManagerLeak"
+        severity="Fatal"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `controls.activity` to `controls.activity.getApplicationContext()`"
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context. Change `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="                   int delim = inetAddress.getHostAddress().indexOf(&apos;%&apos;); // drop ip6 zone suffix"
+        errorLine2="                                                                                 ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1098"
+            column="82"/>
+    </issue>
+
+    <issue
+        id="AppCompatResource"
+        severity="Error"
+        message="Should use `app:showAsAction` with the appcompat library with `xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;`"
+        category="Correctness"
+        priority="5"
+        summary="Menu namespace"
+        explanation="When using the appcompat library, menu resources should refer to the `showAsAction` in the `app:` namespace, not the `android:` namespace.&#xA;&#xA;Similarly, when **not** using the appcompat library, you should be using the `android:showAsAction` attribute."
+        errorLine1="        android:showAsAction=&quot;never&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\menu\app.xml"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="AppCompatCustomView"
+        severity="Error"
+        message="This custom view should extend `android.support.v7.widget.AppCompatEditText` instead"
+        category="Correctness"
+        priority="4"
+        summary="Appcompat Custom Widgets"
+        explanation="In order to support features such as tinting, the appcompat library will automatically load special appcompat replacements for the builtin widgets. However, this does not work for your own custom views.&#xA;&#xA;Instead of extending the `android.widget` classes directly, you should instead extend one of the delegate classes in `android.support.v7.widget.AppCompat`."
+        errorLine1="import android.view.Gravity;"
+        errorLine2="                          ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jEditText.java"
+            line="36"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="AppCompatCustomView"
+        severity="Error"
+        message="This custom view should extend `android.support.v7.widget.AppCompatImageView` instead"
+        category="Correctness"
+        priority="4"
+        summary="Appcompat Custom Widgets"
+        explanation="In order to support features such as tinting, the appcompat library will automatically load special appcompat replacements for the builtin widgets. However, this does not work for your own custom views.&#xA;&#xA;Instead of extending the `android.widget` classes directly, you should instead extend one of the delegate classes in `android.support.v7.widget.AppCompat`."
+        errorLine1="public class jImageView extends ImageView {"
+        errorLine2="  ~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jImageView.java"
+            line="31"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="AppCompatCustomView"
+        severity="Error"
+        message="This custom view should extend `android.support.v7.widget.AppCompatTextView` instead"
+        category="Correctness"
+        priority="4"
+        summary="Appcompat Custom Widgets"
+        explanation="In order to support features such as tinting, the appcompat library will automatically load special appcompat replacements for the builtin widgets. However, this does not work for your own custom views.&#xA;&#xA;Instead of extending the `android.widget` classes directly, you should instead extend one of the delegate classes in `android.support.v7.widget.AppCompat`."
+        errorLine1="public class jTextView extends TextView {"
+        errorLine2="~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jTextView.java"
+            line="33"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.tools.build:gradle than 3.0.1 is available: 3.1.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="        classpath &apos;com.android.tools.build:gradle:3.0.1&apos;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:appcompat-v7 than 25.3.1 is available: 27.1.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &apos;com.android.support:appcompat-v7:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="41"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:design than 25.3.1 is available: 27.1.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &apos;com.android.support:design:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="42"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:cardview-v7 than 25.3.1 is available: 27.1.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &apos;com.android.support:cardview-v7:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="43"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:recyclerview-v7 than 25.3.1 is available: 27.1.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &apos;com.android.support:recyclerview-v7:25.3.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\build.gradle"
+            line="44"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `versionCode` value (`1`) is not used; it is always overridden by the value specified in the Gradle build script (`1`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; package=&quot;id.web.lebah.baku_kata&quot; android:versionCode=&quot;1&quot; android:versionName=&quot;1.0&quot;>"
+        errorLine2="                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\AndroidManifest.xml"
+            line="2"
+            column="103"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `versionName` value (`1.0`) is not used; it is always overridden by the value specified in the Gradle build script (`1.0`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; package=&quot;id.web.lebah.baku_kata&quot; android:versionCode=&quot;1&quot; android:versionName=&quot;1.0&quot;>"
+        errorLine2="                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\AndroidManifest.xml"
+            line="2"
+            column="127"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `minSdkVersion` value (`14`) is not used; it is always overridden by the value specified in the Gradle build script (`14`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="  &lt;uses-sdk android:minSdkVersion=&quot;14&quot; android:targetSdkVersion=&quot;27&quot;/>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\AndroidManifest.xml"
+            line="3"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `targetSdkVersion` value (`27`) is not used; it is always overridden by the value specified in the Gradle build script (`27`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="  &lt;uses-sdk android:minSdkVersion=&quot;14&quot; android:targetSdkVersion=&quot;27&quot;/>"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\AndroidManifest.xml"
+            line="3"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getLine1Number` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="   String destPath = context.getFilesDir().getAbsolutePath();"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1681"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getDeviceId` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="// -------------------------------------------------------------------------"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="1688"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        severity="Error"
+        message="Must be one of: View.VISIBLE, View.INVISIBLE, View.GONE"
+        category="Security"
+        priority="6"
+        summary="Incorrect constant"
+        explanation="Ensures that when parameter in a method only allows a specific set of constants, calls obey those rules."
+        errorLine1="  return controls.activity.getActionBar().isShowing();"
+        errorLine2="                ~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="762"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        severity="Error"
+        message="Must be one of: View.VISIBLE, View.INVISIBLE, View.GONE"
+        category="Security"
+        priority="6"
+        summary="Incorrect constant"
+        explanation="Ensures that when parameter in a method only allows a specific set of constants, calls obey those rules."
+        errorLine1="private class MyCountDownTimer extends CountDownTimer {"
+        errorLine2="                                             ~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\Controls.java"
+            line="789"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute `android:fullBackupContent` to specify an `@xml` resource which configures which files to backup. More info: https://developer.android.com/training/backup/autosyncapi.html"
+        category="Security"
+        priority="3"
+        summary="AllowBackup/FullBackupContent Problems"
+        explanation="The `allowBackup` attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup&#xA;&#xA;By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.&#xA;&#xA;This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.&#xA;&#xA;Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.&#xA;&#xA;To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`.&#xA;&#xA;If not set to false, and if targeting API 23 or later, lint will also warn that you should set `android:fullBackupContent` to configure auto backup."
+        url="https://developer.android.com/training/backup/autosyncapi.html"
+        urls="https://developer.android.com/training/backup/autosyncapi.html,http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        errorLine1="  &lt;application android:allowBackup=&quot;true&quot; android:icon=&quot;@drawable/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:theme=&quot;@style/AppTheme&quot;>"
+        errorLine2="  ^"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\AndroidManifest.xml"
+            line="37"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 14. Merge all the resources in this folder into `values`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values-v11"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v14`) is unnecessary; `minSdkVersion` is 14. Merge all the resources in this folder into `values`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values-v14"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="This AsyncTask class should be static or leaks might occur (id.web.lebah.baku_kata.jHttpClient.AsyncHttpClientPostNameValueData)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="              //process the stream and store it in StringBuilder"
+        errorLine2="                                       ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jHttpClient.java"
+            line="913"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="This AsyncTask class should be static or leaks might occur (id.web.lebah.baku_kata.jHttpClient.AsyncHttpClientGet)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="             if (responseCode == HttpURLConnection.HTTP_OK /*HttpsURLConnection.HTTP_OK*/ ) {"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jHttpClient.java"
+            line="992"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.layout.activity_app` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\layout\activity_app.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.af_send_white` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-mdpi\af_send_white.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.af_send_white_36dp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-hdpi\af_send_white_36dp.png"/>
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-xhdpi\af_send_white_36dp.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.menu.app` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\menu\app.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.primary_text` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;color name=&quot;primary_text&quot;>#212121&lt;/color>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\colors.xml"
+            line="6"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.secondary_text` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;color name=&quot;secondary_text&quot;>#727272&lt;/color>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\colors.xml"
+            line="7"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.icons` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;color name=&quot;icons&quot;>#FFFFFF&lt;/color>"
+        errorLine2="         ~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\colors.xml"
+            line="8"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.divider` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;color name=&quot;divider&quot;>#B6B6B6&lt;/color>"
+        errorLine2="         ~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\colors.xml"
+            line="9"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.activity_horizontal_margin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;activity_horizontal_margin&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\dimens.xml"
+            line="4"
+            column="12"/>
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values-w820dp\dimens.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.activity_vertical_margin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;activity_vertical_margin&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\dimens.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ic_add_white_36dp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-hdpi\ic_add_white_36dp.png"/>
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-xhdpi\ic_add_white_36dp.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ic_menu_white_36dp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-hdpi\ic_menu_white_36dp.png"/>
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-xhdpi\ic_menu_white_36dp.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.hello_world` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;string name=&quot;hello_world&quot;>Hello world!&lt;/string>"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\strings.xml"
+            line="4"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.action_settings` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;string name=&quot;action_settings&quot;>Settings&lt;/string>"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\strings.xml"
+            line="5"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.AppBaseTheme` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;style name=&quot;AppBaseTheme&quot; parent=&quot;android:Theme.Light&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values\styles.xml"
+            line="7"
+            column="12"/>
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values-v11\styles.xml"
+            line="7"
+            column="12"/>
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values-v14\styles.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-hdpi`: af_send_white.png (found in drawable-mdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-hdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-mdpi`: af_send_white_36dp.png, ic_add_white_36dp.png, ic_menu_white_36dp.png"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-mdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-xhdpi`: af_send_white.png (found in drawable-mdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\drawable-xhdpi"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        severity="Warning"
+        message="Missing density variation folders in `res`: drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="3"
+        summary="Missing density folder"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res"/>
+    </issue>
+
+    <issue
+        id="GoogleAppIndexingWarning"
+        severity="Warning"
+        message="App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent filter. See issue explanation for more details."
+        category="Usability"
+        priority="5"
+        summary="Missing support for Firebase App Indexing"
+        explanation="Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search."
+        url="https://g.co/AppIndexing/AndroidStudio"
+        urls="https://g.co/AppIndexing/AndroidStudio"
+        errorLine1="  &lt;application android:allowBackup=&quot;true&quot; android:icon=&quot;@drawable/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:theme=&quot;@style/AppTheme&quot;>"
+        errorLine2="  ^"
+        quickfix="studio">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\AndroidManifest.xml"
+            line="37"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jEditText` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="import android.view.Gravity;"
+        errorLine2="        ~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jEditText.java"
+            line="36"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jImageView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="import android.view.Gravity;"
+        errorLine2="               ~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jImageView.java"
+            line="29"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jPanel` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="import android.widget.RelativeLayout;"
+        errorLine2="                                     ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jPanel.java"
+            line="16"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jScrollView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="public class jScrollView extends ScrollView {"
+        errorLine2="~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jScrollView.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jTextView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="import android.widget.TextView;"
+        errorLine2="                  ~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jTextView.java"
+            line="30"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jsCoordinatorLayout` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="public class jsCoordinatorLayout extends CoordinatorLayout /*dummy*/ { //please, fix what GUI object will be extended!"
+        errorLine2="~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jsCoordinatorLayout.java"
+            line="14"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jsFloatingButton` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1=" "
+        errorLine2=" ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jsFloatingButton.java"
+            line="15"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `jsToolbar` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="/*jVisualControl LAMW template*/"
+        errorLine2="                               ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jsToolbar.java"
+            line="18"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        severity="Warning"
+        message="Custom view `jPanel` overrides `onTouchEvent` but not `performClick`"
+        category="Accessibility"
+        priority="6"
+        summary="Accessibility in Custom Views"
+        explanation="If a `View` that overrides `onTouchEvent` or uses an `OnTouchListener` does not also implement `performClick` and call it when clicks are detected, the `View` may not handle accessibility actions properly. Logic handling the click actions should ideally be placed in `View#performClick` as some accessibility services invoke `performClick` when a click action should occur."
+        errorLine1=" }"
+        errorLine2=" ^">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jPanel.java"
+            line="110"
+            column="2"/>
+    </issue>
+
+</issues>
