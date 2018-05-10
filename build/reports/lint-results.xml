@@ -520,6 +520,38 @@
     </issue>
 
     <issue
+        id="WrongConstant"
+        severity="Error"
+        message="Must be one of: View.VISIBLE, View.INVISIBLE, View.GONE"
+        category="Security"
+        priority="6"
+        summary="Incorrect constant"
+        explanation="Ensures that when parameter in a method only allows a specific set of constants, calls obey those rules."
+        errorLine1="  if (dialog != null) dialog.dismiss();"
+        errorLine2="         ~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jDialogProgress.java"
+            line="84"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        severity="Error"
+        message="Must be one of: View.VISIBLE, View.INVISIBLE, View.GONE"
+        category="Security"
+        priority="6"
+        summary="Incorrect constant"
+        explanation="Ensures that when parameter in a method only allows a specific set of constants, calls obey those rules."
+        errorLine1="      FrameLayout par = (FrameLayout)_layout.getParent();"
+        errorLine2="                                                  ~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jDialogProgress.java"
+            line="94"
+            column="51"/>
+    </issue>
+
+    <issue
         id="AllowBackup"
         severity="Warning"
         message="On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute `android:fullBackupContent` to specify an `@xml` resource which configures which files to backup. More info: https://developer.android.com/training/backup/autosyncapi.html"
@@ -560,6 +592,38 @@
         explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
         <location
             file="C:\Users\masdi\Documents\lamw-prj\baku_kata\res\values-v14"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="This AsyncTask class should be static or leaks might occur (id.web.lebah.baku_kata.jAsyncTask.ATask)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="  public  void Free() {"
+        errorLine2=" ~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jAsyncTask.java"
+            line="42"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="This AsyncTask class should be static or leaks might occur (id.web.lebah.baku_kata.jDialogProgress.ATask)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="   public void ShowAsync() {  //Async"
+        errorLine2="               ~~~~~">
+        <location
+            file="C:\Users\masdi\Documents\lamw-prj\baku_kata\src\id\web\lebah\baku_kata\jDialogProgress.java"
+            line="146"
+            column="16"/>
     </issue>
 
     <issue

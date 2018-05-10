@@ -18,6 +18,8 @@ type
   TMainModule = class(jForm)
     etSentences: jEditText;
     httpLebah: jHttpClient;
+    dpProgress: jDialogProgress;
+    atSendForm: jAsyncTask;
     jsCoordinatorLayout1: jsCoordinatorLayout;
     jsCoordinatorLayout2: jsCoordinatorLayout;
     jsCoordinatorLayout3: jsCoordinatorLayout;
@@ -28,8 +30,16 @@ type
     tvResult: jTextView;
     jTextViewCaption: jTextView;
     procedure btnSubmitClick(Sender: TObject);
+    procedure atSendFormDoInBackground(Sender: TObject; progress: integer; out
+      keepInBackground: boolean);
+    procedure atSendFormPostExecute(Sender: TObject; progress: integer);
+    procedure atSendFormPreExecute(Sender: TObject; out startProgress: integer
+      );
     procedure MainModuleJNIPrompt(Sender: TObject);
   private
+    {kasih nama Pak Lebah saja hasil concatnya, ada ide?}
+    PakLebah: string;
+    function SendFormPakLebah(Progress: integer): boolean;
     {private declarations}
   public
     {public declarations}
@@ -70,6 +80,11 @@ begin
 end;
 
 procedure TMainModule.btnSubmitClick(Sender: TObject);
+begin
+  atSendForm.Execute;
+end;
+
+function TMainModule.SendFormPakLebah(Progress: integer): boolean;
 var
   {HTML yang hasil submit data formnya post}
   formRes: string;
@@ -77,8 +92,7 @@ var
   doc: thtmldocument;
   {tag yang match ditampung di sini}
   els: tdomnodelist;
-  {kasih nama Pak Lebah saja hasil concatnya, ada ide?}
-  PakLebah: string;
+
 
   {everything can be happen}
   function DOMToText(fDOM: TDOMNode): string;
@@ -92,7 +106,8 @@ var
   end;
 
 begin
-  PakLebah += '<b>Hasil periksa teks:</b>';
+  Result:= True; //doing task ...
+  PakLebah += '<b>Hasil periksa teks:</b><br>';
 
   {masukkan form data input_1="contoh kalimat"}
   httpLebah.AddNameValueData('input_1', etSentences.Text);
@@ -117,9 +132,31 @@ begin
   PakLebah := SysUtils.StringReplace(PakLebah, '<blockquote>', '', [rfReplaceAll]);
   PakLebah := SysUtils.StringReplace(PakLebah, '</blockquote>', '<br>', [rfReplaceAll]);
 
+
+  Result:= False; //done ...
+end;
+
+procedure TMainModule.atSendFormDoInBackground(Sender: TObject;
+  progress: integer; out keepInBackground: boolean);
+begin
+  keepInBackground := SendFormPakLebah(Progress);
+end;
+
+
+procedure TMainModule.atSendFormPostExecute(Sender: TObject; progress: integer
+  );
+begin
   {sematkan ke 'tvResult',
      pakai fungsi 'SetTextAsLink' supaya bisa ikut style HTML teksnya}
   tvResult.SetTextAsLink(PakLebah);
+  dpProgress.Close;
+  atSendForm.Done;
+end;
+
+procedure TMainModule.atSendFormPreExecute(Sender: TObject; out
+  startProgress: integer);
+begin
+  dpProgress.Show();
 end;
 
 end.

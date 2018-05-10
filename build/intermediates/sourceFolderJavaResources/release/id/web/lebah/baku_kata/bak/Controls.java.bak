@@ -1983,6 +1983,18 @@ public String jCamera_takePhoto(String path, String filename, int requestCode) {
 //SMART LAMW DESIGNER
 //-------------------------------------------------------------------------------------------------------
 
+public  java.lang.Object jAsyncTask_Create(long pasobj ) {
+   return (java.lang.Object)( new jAsyncTask(this,pasobj));
+}
+public native boolean pOnAsyncEventDoInBackground(long pasobj, int progress);
+public native int pOnAsyncEventProgressUpdate(long pasobj, int progress);
+public native int pOnAsyncEventPreExecute(long pasobj);
+public native void pOnAsyncEventPostExecute(long pasobj, int progress);
+
+public  java.lang.Object jDialogProgress_Create(long pasobj, String title, String msg) {
+  return (jDialogProgress)(new jDialogProgress(activity,this,pasobj,title,msg ) );
+}
+
 public java.lang.Object jEditText_Create(long pasobj ) {
   return (java.lang.Object)( new jEditText(this.activity,this,pasobj));
 }

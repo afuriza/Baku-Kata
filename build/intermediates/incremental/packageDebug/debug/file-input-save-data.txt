@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 10 21:26:27 SGT 2018
+#Thu May 10 22:14:40 SGT 2018
 2.base=C\:\\Users\\masdi\\Documents\\lamw-prj\\baku_kata\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.path=lance.png
 2.baseType=DIRECTORY

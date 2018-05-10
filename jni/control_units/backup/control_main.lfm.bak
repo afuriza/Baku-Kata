@@ -234,4 +234,17 @@ object MainModule: TMainModule
     left = 312
     top = 48
   end
+  object dpProgress: jDialogProgress
+    Title = 'Baku Kata'
+    Msg = 'Mohon tunggu'
+    left = 270
+    top = 106
+  end
+  object atSendForm: jAsyncTask
+    OnDoInBackground = atSendFormDoInBackground
+    OnPreExecute = atSendFormPreExecute
+    OnPostExecute = atSendFormPostExecute
+    left = 256
+    top = 73
+  end
 end

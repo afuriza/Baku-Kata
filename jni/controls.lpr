@@ -337,6 +337,44 @@ begin
 end;
 
 { Class:     id_web_lebah_baku_kata_Controls
+  Method:    pOnAsyncEventDoInBackground
+  Signature: (JI)Z }
+function pOnAsyncEventDoInBackground(PEnv: PJNIEnv; this: JObject; 
+  pasobj: JLong; progress: JInt): JBoolean; cdecl;
+begin
+  Result:=Java_Event_pOnAsyncEventDoInBackground(PEnv, this, TObject(pasobj), 
+    progress);
+end;
+
+{ Class:     id_web_lebah_baku_kata_Controls
+  Method:    pOnAsyncEventProgressUpdate
+  Signature: (JI)I }
+function pOnAsyncEventProgressUpdate(PEnv: PJNIEnv; this: JObject; 
+  pasobj: JLong; progress: JInt): JInt; cdecl;
+begin
+  Result:=Java_Event_pOnAsyncEventProgressUpdate(PEnv, this, TObject(pasobj), 
+    progress);
+end;
+
+{ Class:     id_web_lebah_baku_kata_Controls
+  Method:    pOnAsyncEventPreExecute
+  Signature: (J)I }
+function pOnAsyncEventPreExecute(PEnv: PJNIEnv; this: JObject; pasobj: JLong
+  ): JInt; cdecl;
+begin
+  Result:=Java_Event_pOnAsyncEventPreExecute(PEnv, this, TObject(pasobj));
+end;
+
+{ Class:     id_web_lebah_baku_kata_Controls
+  Method:    pOnAsyncEventPostExecute
+  Signature: (JI)V }
+procedure pOnAsyncEventPostExecute(PEnv: PJNIEnv; this: JObject; pasobj: JLong; 
+  progress: JInt); cdecl;
+begin
+  Java_Event_pOnAsyncEventPostExecute(PEnv, this, TObject(pasobj), progress);
+end;
+
+{ Class:     id_web_lebah_baku_kata_Controls
   Method:    pOnHttpClientContentResult
   Signature: (JLjava/lang/String;)V }
 procedure pOnHttpClientContentResult(PEnv: PJNIEnv; this: JObject; 
@@ -366,7 +404,7 @@ begin
     onPosition, scrolldiff);
 end;
 
-const NativeMethods: array[0..39] of JNINativeMethod = (
+const NativeMethods: array[0..43] of JNINativeMethod = (
    (name: 'pAppOnCreate';
     signature: '(Landroid/content/Context;Landroid/widget/RelativeLayout;'
       +'Landroid/content/Intent;)V';
@@ -479,6 +517,18 @@ const NativeMethods: array[0..39] of JNINativeMethod = (
    (name: 'pOnLayouting';
     signature: '(JZ)V';
     fnPtr: @pOnLayouting; ),
+   (name: 'pOnAsyncEventDoInBackground';
+    signature: '(JI)Z';
+    fnPtr: @pOnAsyncEventDoInBackground; ),
+   (name: 'pOnAsyncEventProgressUpdate';
+    signature: '(JI)I';
+    fnPtr: @pOnAsyncEventProgressUpdate; ),
+   (name: 'pOnAsyncEventPreExecute';
+    signature: '(J)I';
+    fnPtr: @pOnAsyncEventPreExecute; ),
+   (name: 'pOnAsyncEventPostExecute';
+    signature: '(JI)V';
+    fnPtr: @pOnAsyncEventPostExecute; ),
    (name: 'pOnHttpClientContentResult';
     signature: '(JLjava/lang/String;)V';
     fnPtr: @pOnHttpClientContentResult; ),
@@ -600,6 +650,14 @@ exports
   pOnAfterDispatchDraw name 'Java_id_web_lebah_baku_kata_Controls_'
     +'pOnAfterDispatchDraw',
   pOnLayouting name 'Java_id_web_lebah_baku_kata_Controls_pOnLayouting',
+  pOnAsyncEventDoInBackground name 'Java_id_web_lebah_baku_kata_Controls_'
+    +'pOnAsyncEventDoInBackground',
+  pOnAsyncEventProgressUpdate name 'Java_id_web_lebah_baku_kata_Controls_'
+    +'pOnAsyncEventProgressUpdate',
+  pOnAsyncEventPreExecute name 'Java_id_web_lebah_baku_kata_Controls_'
+    +'pOnAsyncEventPreExecute',
+  pOnAsyncEventPostExecute name 'Java_id_web_lebah_baku_kata_Controls_'
+    +'pOnAsyncEventPostExecute',
   pOnHttpClientContentResult name 'Java_id_web_lebah_baku_kata_Controls_'
     +'pOnHttpClientContentResult',
   pOnHttpClientCodeResult name 'Java_id_web_lebah_baku_kata_Controls_'

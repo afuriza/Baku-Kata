@@ -53,7 +53,7 @@
         <ComponentName Value="MainModule"/>
         <HasResources Value="True"/>
         <CustomData Count="1">
-          <Item0 Name="jControls" Value="jEditText;jForm;jHttpClient;jsCoordinatorLayout;jScrollView;jsFloatingButton;jsToolbar;jTextView"/>
+          <Item0 Name="jControls" Value="jAsyncTask;jDialogProgress;jEditText;jForm;jHttpClient;jsCoordinatorLayout;jScrollView;jsFloatingButton;jsToolbar;jTextView"/>
         </CustomData>
       </Unit1>
       <Unit2>
